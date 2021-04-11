@@ -36,7 +36,36 @@ userSchema.pre('save', function (next) {
 			next();
 		});
 	});
-
 });
+
+userSchema.methods.comparePassword = function (candidatePassword) {
+	const user = this;
+
+	return new Promise((resolve, reject) => {
+		bycrpt.compare(candidatePassword, user.password, (err, isMatch) => {
+			if (err) {
+				return reject(err);
+			}
+
+			if (!isMatch) {
+				return reject(false);
+			}
+
+			resolve(true);
+		});
+	});
+
+
+	// Another way to be done
+	// bycrpt.compare(candidatePassword, user.password).then((result) => {
+	// 	try {
+	// 		if (result == true) {
+	// 			return next();
+	// 		}
+	// 	} catch (error) {
+	// 		return error;
+	// 	}
+	// });
+};
 
 mongoose.model('User', userSchema);
