@@ -3,8 +3,6 @@ const mongoose = require('mongoose');
 
 const UserController = require("../controllers/UserController");
 
-const User = mongoose.model('User');
-
 const router = express.Router();
 
 router.post('/signup', UserController.signin);
