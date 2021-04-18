@@ -1,36 +1,21 @@
+require('dotenv').config();
 require('./database/models/User');
 require('./database/models/Track');
+require('./database/config');
 
 const express = require('express');
-const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth.routes');
 const trackRoutes = require('./routes/track.routes');
 
 const requireAuth = require('./middlewares/requireAuth');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // For a procedural point of view, we must first bodyParser the data, then made the request.
 app.use(express.json());
 app.use(authRoutes);
 app.use(trackRoutes);
-
-const mongoUri = 'mongodb+srv://dev_tracker:FlZrYpiY8IgV0OL5rUba@cluster0.i86av.mongodb.net/<dbname>?retryWrites=true&w=majority';
-
-mongoose.connect(mongoUri, {
-	useNewUrlParser: true,
-	useCreateIndex: true,
-	useUnifiedTopology: true
-});
-
-mongoose.connection.on('connected', () => {
-	console.log('Connected to mongo instance');
-});
-
-mongoose.connection.on('error', (err) => {
-	console.error('Error connecting to mongo', err);
-})
 
 app.get('/', requireAuth,(request, response) => {
 	const { email } = request.user;
@@ -39,4 +24,4 @@ app.get('/', requireAuth,(request, response) => {
 
 app.listen(PORT, () => {
 	console.log(`Listening port in ${PORT}`)
-})
+});
