@@ -4,7 +4,6 @@ const express = require('express');
 const requireAuth = require('../middlewares/requireAuth');
 const TrackController = require("../controllers/TrackController");
 
-const Track = mongoose.model('Track');
 const router = express.Router();
 
 router.use(requireAuth);
