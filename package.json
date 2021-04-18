@@ -2,19 +2,45 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "nodemonConfig": {
+    "watch": [
+      "server"
+    ],
+    "ignore": [
+      "*.test.js"
+    ],
+    "delay": "3"
+  },
   "scripts": {
     "dev": "nodemon src/index.js",
+    "start": "pm2 start src/index.js --watch",
+    "restart": "pm2 restart src/index.js --watch",
+    "reload": "pm2 reload src/index.js --watch",
+    "pm2:list": "pm2 list",
+    "pm2:logs": "pm2 logs",
+    "pm2:monit": "pm2 monit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Nodejs",
+    "API",
+    "Authorization",
+    "Authentication"
+  ],
+  "author": "Dheyson Alves",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "helmet": "^4.5.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.3",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "pm2": "^4.5.6"
   }
 }
