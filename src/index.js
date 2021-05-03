@@ -7,6 +7,7 @@ require('./routes/index.routes');
 const express = require('express');
 
 const trackRoutes = require('./routes/index.routes');
+const authRoutes = require('./routes/auth.routes');
 
 const requireAuth = require('./middlewares/requireAuth');
 
