@@ -1,6 +1,6 @@
 require('dotenv').config();
-require('./components/users/User');
-require('./components/tracks/Track');
+require('../components/users/User');
+require('../components/tracks/Track');
 require('./config/database.config');
 require('./routes/index.routes');
 

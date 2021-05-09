@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 
 const requireAuth = require('../middlewares/requireAuth');
-const TrackController = require("../components/tracks/TrackController");
+const TrackController = require("../../components/tracks/TrackController");
 
 const router = express.Router();
 
