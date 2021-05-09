@@ -13,7 +13,7 @@
     "delay": "3"
   },
   "scripts": {
-    "dev": "nodemon src/main/index.js",
+    "dev": "nodemon src/main/server.js",
     "start": "pm2 start src/index.js --watch",
     "restart": "pm2 restart src/index.js --watch",
     "reload": "pm2 reload src/index.js --watch",
