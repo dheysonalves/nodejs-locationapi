@@ -8,8 +8,8 @@ const router = express.Router();
 
 router.use(requireAuth);
 
-router.get('/tracks', TrackController.index);
+router.get('/', TrackController.index);
 
-router.post('/tracks', TrackController.store);
+router.post('/', TrackController.store);
 
 module.exports = router;
