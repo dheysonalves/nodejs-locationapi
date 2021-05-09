@@ -1,7 +1,7 @@
 require('dotenv').config();
-require('./database/models/User');
-require('./database/models/Track');
-require('./database/config');
+require('./components/users/User');
+require('./components/tracks/Track');
+require('./config/database.config');
 require('./routes/index.routes');
 
 const express = require('express');
