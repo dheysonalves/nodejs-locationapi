@@ -38,13 +38,13 @@
   <p align="center">
     This is the parkin app simple nodejs REST API structure.
     <br />
-    <a href="https://github.com/dheysonalves/nodejs-locationapi"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/dheysonalves/parkin-tracker-nodejsapi"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
-    <a href="https://github.com/dheysonalves/nodejs-locationapi/issues">Report Bug</a>
+    <a href="https://github.com/dheysonalves/parkin-tracker-nodejsapi/issues">Report Bug</a>
     ·
-    <a href="https://github.com/dheysonalves/nodejs-locationapi/issues">Request Feature</a>
+    <a href="https://github.com/dheysonalves/parkin-tracker-nodejsapi/issues">Request Feature</a>
   </p>
 </p>
 
@@ -140,7 +140,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/dheysonalves/nodejs-locationapi/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/dheysonalves/parkin-tracker-nodejsapi/issues) for a list of proposed features (and known issues).
 
 
 
@@ -165,7 +165,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [@DheysonAlves2](https://twitter.com/DheysonAlves2)
 
-Project Link: [https://github.com/dheysonalves/nodejs-locationapi/](hhttps://github.com/dheysonalves/nodejs-locationapi/)
+Project Link: [https://github.com/dheysonalves/parkin-tracker-nodejsapi/](hhttps://github.com/dheysonalves/parkin-tracker-nodejsapi/)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
@@ -176,15 +176,15 @@ Project Link: [https://github.com/dheysonalves/nodejs-locationapi/](hhttps://git
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/dheysonalves/nodejs-locationapi.svg?style=for-the-badge
-[contributors-url]: https://github.com/dheysonalves/nodejs-locationapi/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/dheysonalves/nodejs-locationapi.svg?style=for-the-badge
-[forks-url]: https://github.com/dheysonalves/nodejs-locationapi/network/members
-[stars-shield]: https://img.shields.io/github/stars/dheysonalves/nodejs-locationapi.svg?style=for-the-badge
-[stars-url]: https://github.com/dheysonalves/nodejs-locationapi/stargazers
-[issues-shield]: https://img.shields.io/github/issues/dheysonalves/nodejs-locationapi.svg?style=for-the-badge
-[issues-url]: https://github.com/dheysonalves/nodejs-locationapi/issues
-[license-shield]: https://img.shields.io/github/license/dheysonalves/nodejs-locationapi.svg?style=for-the-badge
-[license-url]: https://github.com/dheysonalves/nodejs-locationapi/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/dheysonalves/parkin-tracker-nodejsapi.svg?style=for-the-badge
+[contributors-url]: https://github.com/dheysonalves/parkin-tracker-nodejsapi/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/dheysonalves/parkin-tracker-nodejsapi.svg?style=for-the-badge
+[forks-url]: https://github.com/dheysonalves/parkin-tracker-nodejsapi/network/members
+[stars-shield]: https://img.shields.io/github/stars/dheysonalves/parkin-tracker-nodejsapi.svg?style=for-the-badge
+[stars-url]: https://github.com/dheysonalves/parkin-tracker-nodejsapi/stargazers
+[issues-shield]: https://img.shields.io/github/issues/dheysonalves/parkin-tracker-nodejsapi.svg?style=for-the-badge
+[issues-url]: https://github.com/dheysonalves/parkin-tracker-nodejsapi/issues
+[license-shield]: https://img.shields.io/github/license/dheysonalves/parkin-tracker-nodejsapi.svg?style=for-the-badge
+[license-url]: https://github.com/dheysonalves/parkin-tracker-nodejsapi/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/dheysonalvess/
