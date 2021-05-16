@@ -17,7 +17,7 @@
     "start": "pm2 start src/index.js --watch",
     "restart": "pm2 restart src/index.js --watch",
     "reload": "pm2 reload src/index.js --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha src/components/**/*.test.js"
   },
   "keywords": [
     "Nodejs",
@@ -36,7 +36,10 @@
     "mongoose": "^5.12.3"
   },
   "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
+    "mocha": "^8.4.0",
     "nodemon": "^2.0.7"
   }
 }
