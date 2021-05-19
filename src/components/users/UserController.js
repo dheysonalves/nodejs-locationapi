@@ -4,9 +4,9 @@ const User = mongoose.model('User');
 
 const signup = async (request, response) => {
 	try {
-		const { email, password } = request.body;
+		const { name, email, password } = request.body;
 
-		const user = new User({ email, password });
+		const user = new User({ name, email, password });
 		await user.save();
 
 		const token = jwt.sign({ userId: user._id }, 'MY_SECRET_KEY');
