@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "parkin-tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "A parkin management API with jest.",
   "main": "server.js",
   "nodemonConfig": {
     "watch": [
@@ -17,7 +17,22 @@
     "start": "pm2 start src/index.js --watch",
     "restart": "pm2 restart src/index.js --watch",
     "reload": "pm2 reload src/index.js --watch",
-    "test": "./node_modules/.bin/mocha src/components/**/*.test.js"
+    "prepush": "npm run test:coverage",
+    "test": "jest",
+    "test:tdd": "npm run test --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "keywords": [
     "Nodejs",
@@ -39,7 +54,11 @@
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
     "mocha": "^8.4.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0",
+    "supertest": "^6.1.3"
   }
 }
