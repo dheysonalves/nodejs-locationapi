@@ -1,13 +1,10 @@
 require('dotenv').config();
-require('./database/models/User');
-require('./database/models/Track');
-require('./database/config');
 
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 
-const routes = require('./routes/index.routes.js');
+const routes = require('./routes');
 
 class App {
 	constructor() {
