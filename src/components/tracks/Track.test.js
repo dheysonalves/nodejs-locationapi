@@ -1,32 +1,19 @@
-let mongoose = require("mongoose");
-let Track = require('./Track');
+const request = require('supertest');
+const mongoose = require("mongoose");
+const server = require('../../main/server');
 
-//Require the dev-dependencies
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../main/server');
-let should = chai.should();
-
-chai.use(chaiHttp);
-
-describe('Trackers', () => {
-	// beforeEach((done) => {
-	// 	Track.remove([{}], (error) => {
-	// 		done();
-	// 	});
-	// });
-
+describe('Trackers Service', () => {
+	// it should be authorazed
 	describe('/GET Tracks', () => {
-		it('it should GET all the tracks', (done) => {
-			chai.request(server)
-				.get('/api/tracks/')
-				.end((error, response) => {
-					response.should.have.status(200);
-					response.body.should.be.a('array');
-					response.body.length.should.be.eql(0);
-					done();
-				});
+		it('should return status 200 with the request', function (done) {
+			request(server)
+				.get('/api/tracks')
+				.set('Accept', 'application/json')
+				.expect(200, done);
 		});
+	});
+
+	describe('/POST Tracks', () => {
 	});
 });
 
