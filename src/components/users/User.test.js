@@ -1,5 +1,6 @@
 const request = require('supertest');
-let server = require('../../main/server');
+const mongoose = require("mongoose");
+const server = require('../../main/server');
 
 const MOCK_USER = {
 	name: 'John Walker',
@@ -10,6 +11,18 @@ const MOCK_USER = {
 describe('User Service', () => {
 
 	describe('User Signup POST', () => {
+
+		beforeAll(done => {
+			done();
+		});
+
+		afterAll(done => {
+			// Closing the DB connection allows Jest to exit successfully.
+			server.set("Connection", "close");
+			mongoose.connection.close();
+			done();
+		});
+
 		it('should return status 200 with the request', function (done) {
 			request(server)
 				.post('/api/users/signup')
@@ -61,6 +74,28 @@ describe('User Service', () => {
 	});
 
 	describe('User Signin POST', () => {
+		beforeAll(done => {
+			done();
+		});
+
+		afterAll(done => {
+			// Closing the DB connection allows Jest to exit successfully.
+			server.set("Connection", "close");
+			mongoose.connection.close();
+			done();
+		});
+
+		it('should return status 200 with the request and return the token', function (done) {
+			request(server)
+				.post('/api/users/signin')
+				.send(
+				{
+					"email": "dev@gmail.com",
+					"password": "newpassword"
+				})
+				.set('Accept', 'application/json')
+				.expect(200, done);
+		});
 
 	});
 
